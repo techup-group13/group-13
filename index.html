@@ -1,56 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8">
-    <title>Kursi TechUP</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>Techup - Digital Business Card</title>
 </head>
-<body class="px-2 py-5">
-    <div class="bg-cyan-700 font-serif text-center">
-        <h1 class="text-3xl mb-4">Tungjatjeta, unë jam pjesë e kursit TechUP</h1>
-        <p>Uebfaqja jonë personale.</p>
-    </div>
-    <div class="flex justify-between items-center">
-        <h1 class="text-3xl">Galeria ime</h1>
-        <ul class="flex mt-3.5">
-            <li class="p-3.5 bg-red-700 hover:bg-cyan-300 hover:text-cyan-700 text-cyan-300">
-                <a href="gallery.html">Galeria</a>
-            </li>
-            <li class="p-3.5 bg-red-700 hover:bg-cyan-300 hover:text-cyan-700 text-cyan-300">
-                <a href="about.html">Rreth nesh</a>
-            </li>
-            <li class="p-3.5 bg-red-700 hover:bg-cyan-300 hover:text-cyan-700 text-cyan-300">
-                <a href="contact.html">Kontakt</a>
-            </li>
-        </ul>
-    </div>
-    <p>
-        Këtu do vendosim fotografitë tona që do i shfaqim për të tjerët.
-    </p>
-    <img class="w-[20%] my-10 h-auto mr-auto ml-auto" src="data:image/png;base64,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" alt="Foto1">
-    <table class="w-full">
-        <caption class="caption-bottom">Informatat e personit</caption>
-        <tr>
-            <th class="text-center p-2 bg-sky-900 text-white hover:bg-cyan-300">Emri</th>
-            <th class="text-center p-2 bg-sky-900 text-white hover:bg-cyan-300">Mbiemri</th>
-            <th class="text-center p-2 bg-sky-900 text-white hover:bg-cyan-300">Mosha</th>
-            <th class="text-center p-2 bg-sky-900 text-white hover:bg-cyan-300">Gjinia</th>
-        </tr>
-        <tr>
-            <td class="text-center p-2">Hasan</td>
-            <td class="text-center p-2">Hiseni</td>
-            <td class="text-center p-2">17</td>
-            <td class="text-center p-2">M</td>
-        </tr>
-        <tr>
-            <td class="text-center p-2">Fisnike</td>
-            <td class="text-center p-2">Hasani</td>
-            <td class="text-center p-2">18</td>
-            <td class="text-center p-2">F</td>
-        </tr>
-    </table>
-    <div class="text-right p-5 bg-cyan-300">
-        <p>Contact info: 070 071 072</p>
+<body>
+    <div class="container mx-auto h-screen">
+        <div class="h-full flex justify-between items-center">
+            <div class="grid grid-cols-2 gap-12 items-end">
+                <div>
+                    <p class="font-medium uppercase text-2xl">Lincoln</p>
+                    <div class="flex items-center space-x-4 mt-4">
+                        <img src="/svg/directions.svg" alt="logo" />
+                        <p class="text-lg font-normal text-neutral-900 leading-6">
+                            6 Hilltop Road,
+                            <br><span class="font-medium">Lincoln</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center space-x-4">
+                        <p class="text-lg font-normal text-neutral-900 leading-6">
+                            478-921-6160
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <p class="font-medium uppercase text-2xl">Oakdale</p>
+                    <div class="flex items-center space-x-4 mt-4">
+                        <p class="text-lg font-normal text-neutral-900 leading-6">
+                            1798 Mill Road,
+                            <br><span class="font-medium">Oakdale</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center space-x-4">
+                        <p class="text-lg font-normal text-neutral-900 leading-6">
+                            415-970-5692
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <p class="font-medium uppercase text-2xl">Coleman</p>
+                    <div class="flex items-center space-x-4 mt-4">
+                        <p class="text-lg font-normal text-neutral-900 leading-6">
+                            27410 7th Street East,
+                            <br><span class="font-medium">Coleman</span>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center space-x-4">
+                        <p class="text-lg font-normal text-neutral-900 leading-6">
+                            704-504-7055
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="/svg/logo.svg" alt="logo" /> <!-- Vendosja e logos -->
+        </div>
     </div>
 </body>
 </html>
